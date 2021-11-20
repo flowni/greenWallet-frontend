@@ -9,6 +9,16 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.androidnetworking.AndroidNetworking;
+import com.androidnetworking.common.Priority;
+import com.androidnetworking.error.ANError;
+import com.androidnetworking.interfaces.JSONArrayRequestListener;
+
+import org.json.JSONArray;
+
+import api.ApiCalls;
+import util.BarcodeEncoderUtil;
+
 public class Finance_tracker__community__activity extends Activity {
 
 	
@@ -138,7 +148,9 @@ public class Finance_tracker__community__activity extends Activity {
 		Bitmap barcodeEncoded = BarcodeEncoderUtil.createBarcode("test");
 
 		image_7.setImageBitmap(barcodeEncoded);
-	
+		//ApiCalls.getUser("1");
+		title_ek1.setText("Welcome to your wallet, "+ApiCalls.getUser("1")+"!");
+
 	}
 }
 	

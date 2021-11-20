@@ -32,6 +32,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'com.journeyapps:zxing-android-embedded:3.0.2@aar'
+    implementation 'com.amitshekhar.android:android-networking:1.0.2'
     implementation  'com.google.zxing:core:3.2.1'
     implementation  'com.journeyapps:zxing-android-embedded:3.2.0@aar'
     testImplementation 'junit:junit:4.+'

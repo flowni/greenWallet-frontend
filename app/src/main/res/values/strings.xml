@@ -26,7 +26,7 @@
 	<string name="name_ek10_string">Business</string>
 	<string name="name_ek11_string">Figma</string>
 	<string name="amount_ek5_string">18$</string>
-	<string name="title_ek1_string">Welcome to your Wallet</string>
+	<string name="title_ek1_string">Welcome to your wallet!</string>
 	<string name="title_ek2_string">GreenPoints</string>
 	<string name="amount_ek6_string">1,235</string>
 </resources>

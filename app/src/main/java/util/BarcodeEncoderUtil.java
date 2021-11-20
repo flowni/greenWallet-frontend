@@ -1,4 +1,4 @@
-package exportkit.xd;
+package util;
 
 import android.graphics.Bitmap;
 
