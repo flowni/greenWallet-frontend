@@ -1,3 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">GreenWallet</string>
+	<!-- finance_tracker__community_ strings -->
+
+	<string name="app_name">Design</string>
+	<string name="ek_img_content">ExportKit Image</string>
+	<string name="title_string">Last Purchase</string>
+	<string name="date_string">Nov 20</string>
+	<string name="date_ek1_string">138.45 </string>
+	<string name="name_string"></string>
+	<string name="name_ek1_string">Dribbble</string>
+	<string name="amount_string">24.85 </string>
+	<string name="name_ek2_string"></string>
+	<string name="name_ek3_string">. </string>
+	<string name="amount_ek1_string">113.60 </string>
+	<string name="name_ek4_string"></string>
+	<string name="name_ek5_string"> </string>
+	<string name="amount_ek2_string">15.04 </string>
+	<string name="name_ek6_string"></string>
+	<string name="name_ek7_string">Delivery Club</string>
+	<string name="amount_ek3_string">830 </string>
+	<string name="name_ek8_string"></string>
+	<string name="name_ek9_string">. </string>
+	<string name="amount_ek4_string">560 </string>
+	<string name="name_ek10_string">Business</string>
+	<string name="name_ek11_string">Figma</string>
+	<string name="amount_ek5_string">18$</string>
+	<string name="title_ek1_string">Welcome to your Wallet</string>
+	<string name="title_ek2_string">GreenPoints</string>
+	<string name="amount_ek6_string">1,235</string>
 </resources>
