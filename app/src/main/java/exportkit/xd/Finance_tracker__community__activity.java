@@ -90,7 +90,6 @@ public class Finance_tracker__community__activity extends Activity {
 		
 		_bg__homescreen = (View) findViewById(R.id._bg__homescreen);
 		rectangle_7 = (View) findViewById(R.id.rectangle_7);
-		rectangle_8 = (ImageView) findViewById(R.id.rectangle_8);
 		title = (TextView) findViewById(R.id.title);
 		date = (TextView) findViewById(R.id.date);
 		date_ek1 = (TextView) findViewById(R.id.date_ek1);

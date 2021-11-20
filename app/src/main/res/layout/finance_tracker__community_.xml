@@ -1,5 +1,6 @@
 <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
+	android:fillViewport="true"
 	android:layout_height="wrap_content">
 	<ScrollView
 		android:id="@+id/finance_tracker__community_"
@@ -9,7 +10,8 @@
 		<RelativeLayout
 			android:id="@+id/content_container"
 			android:layout_width="wrap_content"
-			android:layout_height="wrap_content">
+			android:layout_height="wrap_content"
+			android:fillViewport="true">
 
 			<View
 				android:id="@+id/_bg__homescreen"
@@ -27,14 +29,11 @@
 				android:layout_marginTop="0dp"
 				android:background="@drawable/rectangle_7_shape" />
 
-			<ImageView
-				android:id="@+id/rectangle_8"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginStart="0dp"
-				android:layout_marginTop="0dp"
-				android:contentDescription="rectangle_8"
-				android:src="@drawable/rectangle_8" />
+			<View
+				android:id="@+id/myRectangleView"
+				android:layout_width="match_parent"
+				android:layout_height="320dp"
+				android:background="@drawable/rectangle" />
 
 
 			<RelativeLayout
@@ -728,9 +727,9 @@
 
 					<ImageView
 						android:id="@+id/union_ek1"
-						android:layout_width="40dp"
-						android:layout_height="40dp"
-						android:layout_marginStart="5.39dp"
+						android:layout_width="60dp"
+						android:layout_height="60dp"
+						android:layout_marginStart="0dp"
 						android:contentDescription="union_ek1"
 						android:src="@drawable/greenwallet1" />
 
