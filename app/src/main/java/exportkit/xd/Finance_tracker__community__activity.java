@@ -140,7 +140,6 @@ public class Finance_tracker__community__activity extends Activity {
 		header_ek1 = (ImageView) findViewById(R.id.header_ek1);
 		union_ek1 = (ImageView) findViewById(R.id.union_ek1);
 		title_ek1 = (TextView) findViewById(R.id.title_ek1);
-		rectangle_353 = (View) findViewById(R.id.rectangle_353);
 		title_ek2 = (TextView) findViewById(R.id.title_ek2);
 		amount_ek6 = (TextView) findViewById(R.id.amount_ek6);
 		union_ek2 = (ImageView) findViewById(R.id.union_ek2);

@@ -27,8 +27,8 @@
 
 			<ImageView
 				android:id="@+id/greenwallet_1"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
+				android:layout_width="199dp"
+				android:layout_height="400dp"
 				android:layout_centerInParent="true"
 				android:contentDescription="greenwallet_1"
 				android:src="@drawable/greenwallet1" />
@@ -39,6 +39,7 @@
 				android:layout_height="wrap_content"
 				android:layout_below="@id/greenwallet_1"
 				android:layout_centerInParent="true"
+				android:layout_centerHorizontal="true"
 				android:singleLine="true"
 				android:text="@string/company_name"
 				android:textColor="@color/main_green"

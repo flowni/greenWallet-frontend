@@ -728,12 +728,11 @@
 
 					<ImageView
 						android:id="@+id/union_ek1"
-						android:layout_width="17.23dp"
-						android:layout_height="22dp"
+						android:layout_width="40dp"
+						android:layout_height="40dp"
 						android:layout_marginStart="5.39dp"
-						android:layout_marginTop="3dp"
 						android:contentDescription="union_ek1"
-						android:src="@drawable/union_ek1" />
+						android:src="@drawable/greenwallet1" />
 
 				</RelativeLayout>
 
@@ -748,14 +747,6 @@
 					android:textColor="@color/rectangle_7_color"
 					android:textSize="18sp"
 					android:textStyle="bold" />
-
-				<View
-					android:id="@+id/rectangle_353"
-					android:layout_width="10dp"
-					android:layout_height="10dp"
-					android:layout_marginStart="335dp"
-					android:layout_marginTop="14dp"
-					android:background="@drawable/rectangle_353_shape" />
 
 			</RelativeLayout>
 
