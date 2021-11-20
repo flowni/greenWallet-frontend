@@ -1,0 +1,55 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content">
+
+	<RelativeLayout
+		android:id="@+id/content_container"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<View
+			android:id="@+id/_bg__start_screen"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="0dp"
+			android:layout_marginTop="0dp"
+			android:background="@drawable/_bg__start_screen_shape" />
+
+		<ImageView
+			android:id="@+id/rectangle_8"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginStart="0dp"
+			android:layout_marginTop="0dp"
+			android:contentDescription="rectangle_8"
+			android:src="@drawable/background_start_screen" />
+
+		<ImageView
+			android:id="@+id/greenwallet_1"
+			android:layout_width="275dp"
+			android:layout_height="252dp"
+			android:layout_marginStart="50dp"
+			android:layout_marginTop="154dp"
+			android:contentDescription="greenwallet_1"
+			android:src="@drawable/greenwallet_1" />
+
+		<TextView
+			android:id="@+id/company_name"
+			android:layout_width="329dp"
+			android:layout_height="62dp"
+			android:layout_gravity="center_horizontal|center"
+			android:layout_marginLeft="36dp"
+			android:layout_marginTop="488dp"
+			android:fontFamily="Manrope"
+			android:gravity="center"
+			android:text="@string/company_name"
+			android:textColor="@color/rectangle_7_color"
+			android:textSize="48sp"
+			android:textStyle="bold" />
+
+	</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

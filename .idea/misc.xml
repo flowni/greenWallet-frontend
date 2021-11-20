@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Caroline/Documents/greenWallet/greenWallet-frontend/app/src/main/res/drawable-nodpi/_bg__homescreen_shape.xml" value="0.346875" />
+        <entry key="..\:/Users/Caroline/Documents/greenWallet/greenWallet-frontend/app/src/main/res/drawable-nodpi/_bg__start_screen_shape.xml" value="0.346875" />
         <entry key="..\:/Users/Caroline/Documents/greenWallet/greenWallet-frontend/app/src/main/res/layout/finance_tracker__community_.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/Caroline/Documents/greenWallet/greenWallet-frontend/app/src/main/res/layout/start_screen.xml" value="0.3307291666666667" />
       </map>
     </option>
   </component>
