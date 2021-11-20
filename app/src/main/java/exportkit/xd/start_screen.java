@@ -1,6 +1,7 @@
 package exportkit.xd;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 
@@ -21,6 +22,8 @@ public class start_screen extends Activity {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.start_screen);
+		startActivity(new Intent(start_screen.this, finance_tracker__community__activity.class));
+		finish();
 
 		
 		_bg__start_screen = (View) findViewById(R.id._bg__start_screen);
