@@ -12,7 +12,7 @@ import jsonParsing.User;
 
 public class ApiCalls {
 
-    public static String getUser(String user) {
+    public static User getUser(String user) {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
         ANRequest request = AndroidNetworking.get("https://greenwallet.azurewebsites.net/user/{user}")
@@ -21,11 +21,9 @@ public class ApiCalls {
                 .build();
         ANResponse<User> response = request.executeForObject(User.class);
         if (response.isSuccess()) {
-            return response.getResult().getName();
-            // List<User> users = responseTwo.getResult();
+            return response.getResult();
         } else {
-            // handle error
-            return "1";
+            return null;
         }
     }
 }

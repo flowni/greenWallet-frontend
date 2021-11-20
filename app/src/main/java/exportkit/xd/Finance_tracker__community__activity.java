@@ -17,6 +17,7 @@ import com.androidnetworking.interfaces.JSONArrayRequestListener;
 import org.json.JSONArray;
 
 import api.ApiCalls;
+import jsonParsing.User;
 import util.BarcodeEncoderUtil;
 
 public class Finance_tracker__community__activity extends Activity {
@@ -148,8 +149,9 @@ public class Finance_tracker__community__activity extends Activity {
 		Bitmap barcodeEncoded = BarcodeEncoderUtil.createBarcode("test");
 
 		image_7.setImageBitmap(barcodeEncoded);
-		//ApiCalls.getUser("1");
-		title_ek1.setText("Welcome to your wallet, "+ApiCalls.getUser("1")+"!");
+		User user = ApiCalls.getUser("1");
+		title_ek1.setText("Welcome to your wallet, "+user.getName()+"!");
+		amount_ek6.setText(user.getBalance());
 
 	}
 }
