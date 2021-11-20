@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class start_screen extends Activity {
+public class Start_screen extends Activity {
 
 	
 	private View _bg__start_screen;
@@ -22,7 +22,7 @@ public class start_screen extends Activity {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.start_screen);
-		startActivity(new Intent(start_screen.this, finance_tracker__community__activity.class));
+		startActivity(new Intent(Start_screen.this, Finance_tracker__community__activity.class));
 		finish();
 
 		

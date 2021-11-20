@@ -9,7 +9,7 @@ public class SplashScreenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        startActivity(new Intent(SplashScreenActivity.this, finance_tracker__community__activity.class));
+        startActivity(new Intent(SplashScreenActivity.this, Finance_tracker__community__activity.class));
         finish();
     }
 }

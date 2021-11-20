@@ -1,6 +1,7 @@
 package exportkit.xd;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 
 
@@ -8,7 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class finance_tracker__community__activity extends Activity {
+public class Finance_tracker__community__activity extends Activity {
 
 	
 	private View _bg__homescreen;
@@ -133,9 +134,10 @@ public class finance_tracker__community__activity extends Activity {
 		amount_ek6 = (TextView) findViewById(R.id.amount_ek6);
 		union_ek2 = (ImageView) findViewById(R.id.union_ek2);
 		image_7 = (ImageView) findViewById(R.id.image_7);
-	
-		
-		//custom code goes here
+
+		Bitmap barcodeEncoded = BarcodeEncoderUtil.createBarcode("test");
+
+		image_7.setImageBitmap(barcodeEncoded);
 	
 	}
 }
