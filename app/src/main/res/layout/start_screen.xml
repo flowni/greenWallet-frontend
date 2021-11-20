@@ -9,6 +9,7 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		app:layout_constraintStart_toStartOf="parent"
+		android:background="@color/green_50"
 		app:layout_constraintTop_toTopOf="parent">
 
 		<View
@@ -17,39 +18,33 @@
 			android:layout_height="wrap_content"
 			android:layout_marginStart="0dp"
 			android:layout_marginTop="0dp"
-			android:background="@drawable/_bg__start_screen_shape" />
+			android:background="@drawable/fading_background" />
 
-		<ImageView
-			android:id="@+id/rectangle_8"
+		<RelativeLayout
+			android:id="@+id/relative"
 			android:layout_width="match_parent"
-			android:layout_height="match_parent"
-			android:layout_marginStart="0dp"
-			android:layout_marginTop="0dp"
-			android:contentDescription="rectangle_8"
-			android:src="@drawable/background_start_screen" />
+			android:layout_height="match_parent">
 
-		<ImageView
-			android:id="@+id/greenwallet_1"
-			android:layout_width="275dp"
-			android:layout_height="252dp"
-			android:layout_marginStart="50dp"
-			android:layout_marginTop="154dp"
-			android:contentDescription="greenwallet_1"
-			android:src="@drawable/greenwallet_1" />
+			<ImageView
+				android:id="@+id/greenwallet_1"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:contentDescription="greenwallet_1"
+				android:src="@drawable/greenwallet1" />
 
-		<TextView
-			android:id="@+id/company_name"
-			android:layout_width="329dp"
-			android:layout_height="62dp"
-			android:layout_gravity="center_horizontal|center"
-			android:layout_marginLeft="36dp"
-			android:layout_marginTop="488dp"
-			android:fontFamily="Manrope"
-			android:gravity="center"
-			android:text="@string/company_name"
-			android:textColor="@color/rectangle_7_color"
-			android:textSize="48sp"
-			android:textStyle="bold" />
+			<TextView
+				android:id="@+id/company_name"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/greenwallet_1"
+				android:layout_centerInParent="true"
+				android:singleLine="true"
+				android:text="@string/company_name"
+				android:textColor="@color/main_green"
+				android:textSize="50dp"
+				android:textStyle="bold" />
+		</RelativeLayout>
 
 	</RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
