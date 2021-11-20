@@ -145,11 +145,10 @@ public class Finance_tracker__community__activity extends Activity {
 		union_ek2 = (ImageView) findViewById(R.id.union_ek2);
 		image_7 = (ImageView) findViewById(R.id.image_7);
 
-		Bitmap barcodeEncoded = BarcodeEncoderUtil.createBarcode("test");
-
-		image_7.setImageBitmap(barcodeEncoded);
 		User user = ApiCalls.getUser("1");
+		Bitmap barcodeEncoded = BarcodeEncoderUtil.createBarcode(user.getBarcode());
 		title_ek1.setText("Welcome to your wallet, "+user.getName()+"!");
+		image_7.setImageBitmap(barcodeEncoded);
 		amount_ek6.setText(user.getBalance());
 
 	}
