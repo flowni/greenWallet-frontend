@@ -1,7 +1,6 @@
 package jsonParsing;
 
 public class User {
-    // {"id": 1, "name": "Nicholas", "email": "nicholas@summ-ai.com", "barcode": "023723387323", "total_coins_earned": 100, "balance": 100}
     private String id;
     private String name;
     private String email;
