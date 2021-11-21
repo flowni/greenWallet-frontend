@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#236F57">
+    android:background="@drawable/fading_background">
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="56dp"
         android:text="Product Name"
-        android:textColor="#D8D8D8"
-        android:textSize="24dp"
+        android:textColor="@color/white"
+        android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,8 +23,8 @@
         android:id="@+id/imageView3"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginTop="404dp"
+        android:layout_marginEnd="52dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/sym_def_app_icon" />
@@ -65,7 +65,7 @@
         android:layout_height="35dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="12dp"
-        android:background="#DFDFDF"
+        android:background="@color/white"
         android:includeFontPadding="false"
         android:padding="10dp"
         android:text="vegan"
@@ -78,7 +78,7 @@
         android:layout_height="35dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="92dp"
-        android:background="#DFDFDF"
+        android:background="@color/white"
         android:includeFontPadding="false"
         android:padding="10dp"
         android:text="..."
@@ -88,27 +88,12 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <TextView
-        android:id="@+id/textView10"
-        android:layout_width="134dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="56dp"
-        android:background="#DFDFDF"
-        android:includeFontPadding="false"
-        android:padding="10dp"
-        android:text="..."
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.058"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-    <TextView
         android:id="@+id/textView9"
         android:layout_width="134dp"
         android:layout_height="35dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="8dp"
-        android:background="#DFDFDF"
+        android:background="@color/white"
         android:includeFontPadding="false"
         android:padding="10dp"
         android:text="vegan"
@@ -144,6 +129,7 @@
         android:layout_marginBottom="76dp"
         android:text="8.0"
         android:textSize="50dp"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -151,8 +137,8 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="84dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="76dp"
         android:text="Recommend"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

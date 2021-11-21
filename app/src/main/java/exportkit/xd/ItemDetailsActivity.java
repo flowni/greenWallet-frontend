@@ -1,5 +1,8 @@
 package exportkit.xd;
 
+import android.app.ActionBar;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -8,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import api.ApiCalls;
 import jsonParsing.Product;
+import util.DownloadImageTaskUtil;
 
 public class ItemDetailsActivity extends AppCompatActivity {
 
@@ -38,6 +42,8 @@ public class ItemDetailsActivity extends AppCompatActivity {
         // productImageView.setImageBitmap(productDetails.getImage());
         // mainCategory.setText(??);
         // ingrediants.setText();
+        new DownloadImageTaskUtil(productImageView).execute("https://images.openfoodfacts.org/images/products/872/270/043/0889/front_fr.61.200.jpg");
+
         manufacturePlace.setText(productDetails.getManufacturing_places());
         //which score?
         score.setText(productDetails.getNova_score());
