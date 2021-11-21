@@ -49,7 +49,7 @@ public class PurchaseHistoryActivity extends AppCompatActivity {
 
         }
     public void sendMessage(View view) {
-        Intent intent = new Intent(PurchaseHistoryActivity.this, SplashScreenActivity.class);
+        Intent intent = new Intent(PurchaseHistoryActivity.this, PurchaseDetailsActivity.class);
         startActivity(intent);
     }
 }

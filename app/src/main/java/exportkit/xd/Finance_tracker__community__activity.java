@@ -45,6 +45,8 @@ public class Finance_tracker__community__activity extends Activity {
 	private Button gotoPurchaseHistoryBtn;
 	private RecyclerView recyclerViewDashboard;
 
+	final static int MAX_NUMBER = 4;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 
@@ -76,7 +78,7 @@ public class Finance_tracker__community__activity extends Activity {
 		ArrayList<String> score = new ArrayList<>();
 
 		List<Purchase> listOfPurchases = ApiCalls.get_purchases_of_user("2");
-		for(int i = 0;i < listOfPurchases.size() || i > 4;i++) {
+		for(int i = 0;i < listOfPurchases.size() || i > MAX_NUMBER;i++) {
 			stores.add(listOfPurchases.get(i).getPartner_name());
 			score.add(listOfPurchases.get(i).getTotal_coins());
 			imageUrls.add(listOfPurchases.get(i).getPartner_icon_url());
@@ -89,7 +91,7 @@ public class Finance_tracker__community__activity extends Activity {
 		gotoPurchaseHistoryBtn.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Intent intent = new Intent(view.getContext(), PurchaseDetailsActivity.class);
+				Intent intent = new Intent(view.getContext(), PurchaseHistoryActivity.class);
 				startActivity(intent);
 			}
 		});
