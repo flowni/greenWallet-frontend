@@ -1,11 +1,13 @@
 package exportkit.xd;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -80,6 +82,7 @@ public class Finance_tracker__community__activity extends Activity {
 	private TextView amount_ek6;
 	private ImageView union_ek2;
 	private ImageView image_7;
+	private Button gotoPurchaseHistoryBtn;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -143,6 +146,7 @@ public class Finance_tracker__community__activity extends Activity {
 		amount_ek6 = (TextView) findViewById(R.id.amount_ek6);
 		union_ek2 = (ImageView) findViewById(R.id.union_ek2);
 		image_7 = (ImageView) findViewById(R.id.image_7);
+		gotoPurchaseHistoryBtn = (Button) findViewById(R.id.button);
 
 		User user = ApiCalls.getUser("1");
 		Bitmap barcodeEncoded = BarcodeEncoderUtil.createBarcode(user.getBarcode());
@@ -150,6 +154,13 @@ public class Finance_tracker__community__activity extends Activity {
 		image_7.setImageBitmap(barcodeEncoded);
 		amount_ek6.setText(user.getBalance());
 
+		gotoPurchaseHistoryBtn.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Intent intent = new Intent(view.getContext(), PurchaseHistoryActivity.class);
+				startActivity(intent);
+			}
+		});
 	}
 }
 	
