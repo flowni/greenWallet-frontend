@@ -1,188 +1,192 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content">
 
-	<ScrollView
-		android:id="@+id/finance_tracker__community_"
+	<RelativeLayout
+		android:id="@+id/content_container"
 		android:layout_width="wrap_content"
-		android:layout_height="match_parent">
+		android:layout_height="wrap_content"
+		android:fillViewport="true"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
 
-		<RelativeLayout
-			android:id="@+id/content_container"
+		<View
+			android:id="@+id/_bg__homescreen"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:fillViewport="true">
+			android:layout_marginStart="0dp"
+			android:layout_marginTop="0dp"
+			android:background="@drawable/_bg__homescreen_shape" />
 
-			<View
-				android:id="@+id/_bg__homescreen"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginStart="0dp"
-				android:layout_marginTop="0dp"
-				android:background="@drawable/_bg__homescreen_shape" />
+		<View
+			android:id="@+id/rectangle_7"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="0dp"
+			android:layout_marginTop="0dp"
+			android:background="@drawable/rectangle_7_shape" />
 
-			<View
-				android:id="@+id/rectangle_7"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginStart="0dp"
-				android:layout_marginTop="0dp"
-				android:background="@drawable/rectangle_7_shape" />
-
-			<View
-				android:id="@+id/myRectangleView"
-				android:layout_width="match_parent"
-				android:layout_height="320dp"
-				android:background="@drawable/rectangle" />
+		<View
+			android:id="@+id/myRectangleView"
+			android:layout_width="match_parent"
+			android:layout_height="320dp"
+			android:background="@drawable/rectangle" />
 
 
-			<RelativeLayout
-				android:id="@+id/frame_12"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginStart="0dp"
-				android:layout_marginTop="418dp">
-
-
-				<RelativeLayout
-					android:id="@+id/frame_5"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:layout_marginStart="0dp"
-					android:layout_marginTop="0dp">
-
-					<TextView
-						android:id="@+id/title"
-						android:layout_width="334dp"
-						android:layout_height="41dp"
-						android:layout_marginLeft="32dp"
-						android:layout_marginTop="8dp"
-						android:fontFamily="Manrope"
-						android:text="@string/title_string"
-						android:textColor="@color/title_color"
-						android:textSize="18sp"
-						android:textStyle="bold" />
-
-				</RelativeLayout>
-
-
-			</RelativeLayout>
+		<RelativeLayout
+			android:id="@+id/frame_12"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="0dp"
+			android:layout_marginTop="418dp">
 
 
 			<RelativeLayout
-				android:id="@+id/header"
+				android:id="@+id/frame_5"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_marginStart="0dp"
-				android:layout_marginTop="44dp">
-
-				<ImageView
-					android:id="@+id/header_ek1"
-					android:layout_width="375dp"
-					android:layout_height="96dp"
-					android:layout_marginStart="0dp"
-					android:layout_marginTop="-44dp"
-					android:contentDescription="header_ek1"
-					android:src="@drawable/header_ek1" />
-
-
-				<RelativeLayout
-					android:id="@+id/user"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:layout_marginStart="315dp"
-					android:layout_marginTop="12dp">
-
-					<ImageView
-						android:id="@+id/union_ek1"
-						android:layout_width="60dp"
-						android:layout_height="60dp"
-						android:layout_marginStart="0dp"
-						android:contentDescription="union_ek1"
-						android:src="@drawable/greenwallet1" />
-
-				</RelativeLayout>
+				android:layout_marginTop="0dp">
 
 				<TextView
-					android:id="@+id/title_ek1"
-					android:layout_width="228dp"
+					android:id="@+id/title"
+					android:layout_width="334dp"
 					android:layout_height="41dp"
 					android:layout_marginLeft="32dp"
-					android:layout_marginTop="12dp"
+					android:layout_marginTop="8dp"
 					android:fontFamily="Manrope"
-					android:text="@string/title_ek1_string"
-					android:textColor="@color/rectangle_7_color"
+					android:text="@string/title_string"
+					android:textColor="@color/title_color"
 					android:textSize="18sp"
 					android:textStyle="bold" />
 
 			</RelativeLayout>
 
 
+		</RelativeLayout>
+
+
+		<RelativeLayout
+			android:id="@+id/header"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="0dp"
+			android:layout_marginTop="44dp">
+
+			<ImageView
+				android:id="@+id/header_ek1"
+				android:layout_width="375dp"
+				android:layout_height="96dp"
+				android:layout_marginStart="0dp"
+				android:layout_marginTop="-44dp"
+				android:contentDescription="header_ek1"
+				android:src="@drawable/header_ek1" />
+
+
 			<RelativeLayout
-				android:id="@+id/header_ek2"
+				android:id="@+id/user"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:layout_marginStart="32dp"
-				android:layout_marginTop="366dp">
+				android:layout_marginStart="315dp"
+				android:layout_marginTop="12dp">
 
-
-				<RelativeLayout
-					android:id="@+id/frame_11"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
+				<ImageView
+					android:id="@+id/union_ek1"
+					android:layout_width="60dp"
+					android:layout_height="60dp"
 					android:layout_marginStart="0dp"
-					android:layout_marginTop="0dp">
-
-					<TextView
-						android:id="@+id/title_ek2"
-						android:layout_width="133dp"
-						android:layout_height="41dp"
-						android:layout_marginLeft="0dp"
-						android:layout_marginTop="0dp"
-						android:fontFamily="Manrope"
-						android:text="@string/title_ek2_string"
-						android:textColor="@color/title_color"
-						android:textSize="18sp"
-						android:textStyle="bold" />
-
-				</RelativeLayout>
+					android:contentDescription="union_ek1"
+					android:src="@drawable/greenwallet1" />
 
 			</RelativeLayout>
 
 			<TextView
-				android:id="@+id/amount_ek6"
-				android:layout_width="52dp"
-				android:layout_height="34.5dp"
-				android:layout_gravity="center_vertical|end"
-				android:layout_marginLeft="284dp"
-				android:layout_marginTop="368dp"
-				android:fontFamily="Inter"
-				android:gravity="end"
-				android:text="@string/amount_ek6_string"
-				android:textColor="@color/amount_ek6_color"
-				android:textSize="15sp" />
-
-
-			<ImageView
-				android:id="@+id/image_7"
-				android:layout_width="318dp"
-				android:layout_height="174dp"
-				android:layout_marginStart="29dp"
-				android:layout_marginTop="119dp"
-				android:contentDescription="image_7"
-				android:src="@drawable/image_7" />
-
-			<Button
-				android:id="@+id/button"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_alignParentTop="true"
-				android:layout_alignParentEnd="true"
-				android:layout_marginTop="323dp"
-				android:layout_marginEnd="40dp"
-				android:text="All purchases >" />
+				android:id="@+id/title_ek1"
+				android:layout_width="228dp"
+				android:layout_height="41dp"
+				android:layout_marginLeft="32dp"
+				android:layout_marginTop="12dp"
+				android:fontFamily="Manrope"
+				android:text="@string/title_ek1_string"
+				android:textColor="@color/rectangle_7_color"
+				android:textSize="18sp"
+				android:textStyle="bold" />
 
 		</RelativeLayout>
 
-	</ScrollView>
+
+		<RelativeLayout
+			android:id="@+id/header_ek2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="32dp"
+			android:layout_marginTop="366dp">
+
+
+			<RelativeLayout
+				android:id="@+id/frame_11"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="0dp"
+				android:layout_marginTop="0dp">
+
+				<TextView
+					android:id="@+id/title_ek2"
+					android:layout_width="133dp"
+					android:layout_height="41dp"
+					android:layout_marginLeft="0dp"
+					android:layout_marginTop="0dp"
+					android:fontFamily="Manrope"
+					android:text="@string/title_ek2_string"
+					android:textColor="@color/title_color"
+					android:textSize="18sp"
+					android:textStyle="bold" />
+
+			</RelativeLayout>
+
+		</RelativeLayout>
+
+		<TextView
+			android:id="@+id/amount_ek6"
+			android:layout_width="52dp"
+			android:layout_height="34.5dp"
+			android:layout_gravity="center_vertical|end"
+			android:layout_marginLeft="284dp"
+			android:layout_marginTop="368dp"
+			android:fontFamily="Inter"
+			android:gravity="end"
+			android:text="@string/amount_ek6_string"
+			android:textColor="@color/amount_ek6_color"
+			android:textSize="15sp" />
+
+
+		<ImageView
+			android:id="@+id/image_7"
+			android:layout_width="318dp"
+			android:layout_height="174dp"
+			android:layout_marginStart="29dp"
+			android:layout_marginTop="119dp"
+			android:contentDescription="image_7"
+			android:src="@drawable/image_7" />
+
+		<Button
+			android:id="@+id/button"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			android:layout_alignParentEnd="true"
+			android:layout_marginTop="323dp"
+			android:layout_marginEnd="40dp"
+			android:text="All purchases >" />
+
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/recyclerViewDashboard"
+			android:layout_width="match_parent"
+			android:layout_height="266dp"
+			android:layout_below="@+id/frame_12"
+			android:layout_marginTop="19dp" />
+
+	</RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

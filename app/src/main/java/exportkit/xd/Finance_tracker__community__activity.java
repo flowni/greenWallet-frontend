@@ -11,6 +11,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
@@ -35,6 +38,7 @@ public class Finance_tracker__community__activity extends Activity {
 	private TextView amount_ek6;
 	private ImageView image_7;
 	private Button gotoPurchaseHistoryBtn;
+	private RecyclerView recyclerViewDashboard;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -53,12 +57,22 @@ public class Finance_tracker__community__activity extends Activity {
 		amount_ek6 = (TextView) findViewById(R.id.amount_ek6);
 		image_7 = (ImageView) findViewById(R.id.image_7);
 		gotoPurchaseHistoryBtn = (Button) findViewById(R.id.button);
+		recyclerViewDashboard = (RecyclerView) findViewById(R.id.recyclerViewDashboard);
 
 		User user = ApiCalls.getUser("1");
 		Bitmap barcodeEncoded = BarcodeEncoderUtil.createBarcode(user.getBarcode());
 		title_ek1.setText("Welcome to your wallet, "+user.getName()+"!");
 		image_7.setImageBitmap(barcodeEncoded);
 		amount_ek6.setText(user.getBalance());
+
+		// mock data
+		String[] s1 = new String[]{"Rewe", "Aldi", "Edeka", "Rewe", "Rewe", "Aldi", "Edeka", "Rewe"};
+		double[] scores = new double[]{11.0, 32.3, 32.2, -23.2, 11.0, 32.3, 32.2, -23.2};
+
+		//connect recyclerview
+		PurchaseHistoryAdapter purchaseHistoryAdapter = new PurchaseHistoryAdapter(this, s1, scores);
+		recyclerViewDashboard.setAdapter(purchaseHistoryAdapter);
+		recyclerViewDashboard.setLayoutManager(new LinearLayoutManager(this));
 
 		gotoPurchaseHistoryBtn.setOnClickListener(new View.OnClickListener() {
 			@Override
