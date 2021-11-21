@@ -47,7 +47,7 @@ public class ApiCalls {
     public static Purchase getPurchaseDetails(String purchaseId) {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
-        ANRequest request = AndroidNetworking.get("https://greenwallet.azurewebsites.net/purchase/{user}")
+        ANRequest request = AndroidNetworking.get("https://greenwallet.azurewebsites.net/purchase_details/{user}")
                 .addPathParameter("user", purchaseId)
                 .setPriority(Priority.LOW)
                 .build();

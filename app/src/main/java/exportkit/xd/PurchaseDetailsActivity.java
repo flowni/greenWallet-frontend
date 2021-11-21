@@ -7,7 +7,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
+import api.ApiCalls;
 import jsonParsing.Product;
+import jsonParsing.Purchase;
 
 public class PurchaseDetailsActivity extends AppCompatActivity {
 
@@ -15,11 +17,10 @@ public class PurchaseDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_purchase_details);
+        String purchaseId = getIntent().getExtras().getString("purchase_id");
 
-        // mock data
-        Product product = new Product();
-        product.setProduct_name("test product");
-        Product products[] = new Product[]{product, product, product, product, product,product,product, product,product};
+        Purchase purchase = ApiCalls.getPurchaseDetails(purchaseId);
+        Product[] products = purchase.getProducts();
 
         GridView gridView = (GridView)findViewById(R.id.gridview);
         PurchaseDetailsAdapter booksAdapter = new PurchaseDetailsAdapter(this, products);

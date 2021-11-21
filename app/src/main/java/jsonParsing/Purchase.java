@@ -6,14 +6,14 @@ public class Purchase {
     private String partner_name = "";
     private String total_amount = "";
     private String total_coins = "";
-    private String products = "";
+    private Product[] products;
     private String partner_icon_url = "";
 
-    public String getProducts() {
+    public Product[] getProducts() {
         return products;
     }
 
-    public void setProducts(String products) {
+    public void setProducts(Product[] products) {
         this.products = products;
     }
 
