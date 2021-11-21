@@ -1,5 +1,4 @@
 package jsonParsing;
-//[[1, "2021-11-19 08:15:00", 1, "Edeka", 27.0, "27.0000"], [2, "2021-11-19 14:20:15", 1, "Edeka", 5.0, "5.0000"], [4, "2021-11-20 07:09:20", 2, "Lidl", 128.0, "128.0000"]]
 public class Purchase {
     private String purchase_id = "";
     private String product_time = "";
@@ -7,6 +6,7 @@ public class Purchase {
     private String partner_name = "";
     private String total_amount = "";
     private String total_coins = "";
+    private String products = "";
 
     public String getPurchase_id() {
         return purchase_id;
