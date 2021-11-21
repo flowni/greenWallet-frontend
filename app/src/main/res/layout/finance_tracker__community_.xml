@@ -158,7 +158,8 @@
 			android:gravity="end"
 			android:text="@string/amount_ek6_string"
 			android:textColor="@color/amount_ek6_color"
-			android:textSize="15sp" />
+			android:textSize="20sp"
+			android:textStyle="bold"/>
 
 
 		<ImageView
@@ -177,15 +178,17 @@
 			android:layout_alignParentStart="true"
 			android:layout_alignParentEnd="true"
 			android:layout_alignParentBottom="true"
-			android:layout_marginStart="133dp"
-			android:layout_marginEnd="135dp"
-			android:layout_marginBottom="683dp"
-			android:text="All purchases >" />
+			android:layout_marginStart="129dp"
+			android:layout_marginEnd="138dp"
+			android:layout_marginBottom="18dp"
+			android:background="@color/main_green"
+			android:text="All purchases"
+			android:textColor="@color/white" />
 
 		<androidx.recyclerview.widget.RecyclerView
 			android:id="@+id/recyclerViewDashboard"
 			android:layout_width="match_parent"
-			android:layout_height="181dp"
+			android:layout_height="match_parent"
 			android:layout_below="@+id/frame_12"
 			android:layout_marginTop="19dp" />
 
