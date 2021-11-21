@@ -89,7 +89,7 @@ public class Finance_tracker__community__activity extends Activity {
 		gotoPurchaseHistoryBtn.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Intent intent = new Intent(view.getContext(), PurchaseHistoryActivity.class);
+				Intent intent = new Intent(view.getContext(), PurchaseDetailsActivity.class);
 				startActivity(intent);
 			}
 		});

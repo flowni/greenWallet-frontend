@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<!-- finance_tracker__community_ strings -->
+    <!-- finance_tracker__community_ strings -->
+
 
 	<string name="app_name">Design</string>
 	<string name="ek_img_content">ExportKit Image</string>
