@@ -41,7 +41,7 @@ public class PurchaseDetailsActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(PurchaseDetailsActivity.this, ItemDetailsActivity.class);
                 //intent.putExtra("product", product.getId());
-                intent.putExtra("product", "1");
+                intent.putExtra("product", "2");
                 startActivity(intent);
 
 
