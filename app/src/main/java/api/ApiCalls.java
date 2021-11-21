@@ -63,10 +63,10 @@ public class ApiCalls {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
         ANRequest request = AndroidNetworking.get("https://greenwallet.azurewebsites.net/product_info/{purchaseId}")
-                .addPathParameter("user", purchaseId)
+                .addPathParameter("purchaseId", purchaseId)
                 .setPriority(Priority.LOW)
                 .build();
-        ANResponse<Product> response = request.executeForObject(Purchase.class);
+        ANResponse<Product> response = request.executeForObject(Product.class);
         if (response.isSuccess()) {
             return response.getResult();
         } else {
