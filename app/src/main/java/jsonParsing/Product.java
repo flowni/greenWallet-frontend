@@ -6,9 +6,9 @@ public class Product {
     private String product_name = "";
     private String brands = "";
     private String image = "";
-    private String[] categories_hierarchy;
+    // private String[] categories_hierarchy;
     private String nova_score = "";
-    private String[] ingredients_analysis_tags;
+    // private String[] ingredients_analysis_tags;
     private String ecoscore_grade = "";
     private String manufacturing_places = "";
     private String green_score = "";
@@ -53,28 +53,12 @@ public class Product {
         this.image = image;
     }
 
-    public String[] getCategories_hierarchy() {
-        return categories_hierarchy;
-    }
-
-    public void setCategories_hierarchy(String[] categories_hierarchy) {
-        this.categories_hierarchy = categories_hierarchy;
-    }
-
     public String getNova_score() {
         return nova_score;
     }
 
     public void setNova_score(String nova_score) {
         this.nova_score = nova_score;
-    }
-
-    public String[] getIngredients_analysis_tags() {
-        return ingredients_analysis_tags;
-    }
-
-    public void setIngredients_analysis_tags(String[] ingredients_analysis_tags) {
-        this.ingredients_analysis_tags = ingredients_analysis_tags;
     }
 
     public String getEcoscore_grade() {
