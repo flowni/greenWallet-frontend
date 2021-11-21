@@ -37,7 +37,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
         score = findViewById(R.id.textView14);
 
 
-        String productId = getIntent().getExtras().getString("product");
+        String productId = getIntent().getExtras().getString("purchase_id");
         Product productDetails = ApiCalls.getProductInfo(productId);
         productNameTextView.setText(productDetails.getProduct_name());
         // mainCategory.setText(productDetails.get);
