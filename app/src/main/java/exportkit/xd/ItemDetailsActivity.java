@@ -40,10 +40,9 @@ public class ItemDetailsActivity extends AppCompatActivity {
         String productId = getIntent().getExtras().getString("product");
         Product productDetails = ApiCalls.getProductInfo(productId);
         productNameTextView.setText(productDetails.getProduct_name());
-        // productImageView.setImageBitmap(productDetails.getImage());
         // mainCategory.setText(??);
         // ingrediants.setText();
-        new DownloadImageTaskUtil(productImageView).execute("https://images.openfoodfacts.org/images/products/872/270/043/0889/front_fr.61.200.jpg");
+        new DownloadImageTaskUtil(productImageView).execute(productDetails.getImage());
 
         manufacturePlace.setText(productDetails.getManufacturing_places());
         //which score?
