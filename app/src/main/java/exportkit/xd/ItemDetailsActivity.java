@@ -40,7 +40,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
         String productId = getIntent().getExtras().getString("product");
         Product productDetails = ApiCalls.getProductInfo(productId);
         productNameTextView.setText(productDetails.getProduct_name());
-        // mainCategory.setText(??);
+        // mainCategory.setText(productDetails.get);
         // ingrediants.setText();
         new DownloadImageTaskUtil(productImageView).execute(productDetails.getImage());
 

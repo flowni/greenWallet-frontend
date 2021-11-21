@@ -1,6 +1,7 @@
 package exportkit.xd;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.Image;
@@ -13,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.io.InputStream;
@@ -43,15 +45,22 @@ public class PurchaseHistoryAdapter extends RecyclerView.Adapter<PurchaseHistory
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.name.setText(names.get(position));
-        holder.score.setText(scores.get(position));
+        holder.name.setText(names.get(holder.getAdapterPosition()));
+        holder.score.setText(scores.get(holder.getAdapterPosition()));
 
-        // show The Image in a ImageView
-        //new DownloadImageTask((ImageView) holder.imageView)
-        //        .execute("https://camo.githubusercontent.com/ac6e1101f110e5f500287cf70dac72519687620deefb5e8de1fa7ba6a3ba2407/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f706e672f747769747465722e706e67");
+        holder.mainLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.out.println("testclick" + Integer.toString(holder.getAdapterPosition()));
+                Intent intent = new Intent(context, ItemDetailsActivity.class);
+                intent.putExtra("purchase_id", holder.getAdapterPosition());
+                context.startActivity(intent);
+            }
+        });
 
         new DownloadImageTask((ImageView) holder.imageView)
                .execute(imageUrls.get(position));
+
     }
 
     @Override
@@ -63,12 +72,14 @@ public class PurchaseHistoryAdapter extends RecyclerView.Adapter<PurchaseHistory
 
         TextView name, score;
         ImageView imageView;
+        ConstraintLayout mainLayout;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.textView);
             score = itemView.findViewById(R.id.textView2);
             imageView = itemView.findViewById(R.id.imageView);
+            mainLayout = itemView.findViewById(R.id.mainLayout);
         }
     }
 

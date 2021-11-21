@@ -53,5 +53,4 @@ public class PurchaseDetailsAdapter extends BaseAdapter {
 
         return convertView;
     }
-
 }

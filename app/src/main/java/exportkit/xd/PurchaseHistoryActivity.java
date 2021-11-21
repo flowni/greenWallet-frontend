@@ -52,9 +52,12 @@ public class PurchaseHistoryActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         }
-    public void sendMessage(View view) {
+    /*
+        public void sendMessage(View view) {
         Intent intent = new Intent(PurchaseHistoryActivity.this, PurchaseDetailsActivity.class);
         intent.putExtra("purchase_id", "1");
         startActivity(intent);
     }
+
+     */
 }
