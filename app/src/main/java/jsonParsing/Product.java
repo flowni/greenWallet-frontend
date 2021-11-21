@@ -1,32 +1,28 @@
 package jsonParsing;
 
 public class Product {
-    private String id = "";
-    private String barcode = "";
+    private String product_id = "";
     private String product_name = "";
-    private String brands = "";
-    private String image = "";
-    private String categories_hierarchy = "";
-    private String nova_score = "";
-    private String ingredients_analysis_tags = "";
-    private String ecoscore_grade = "";
-    private String manufacturing_places = "";
-    private String green_score = "";
+    private String quantity = "";
+    private String total_amount = "";
+    private String coins_earned = "";
+    private String product_image = "";
+    private String barcode = "";
 
-    public String getId() {
-        return id;
+    public String getProduct_image() {
+        return product_image;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setProduct_image(String product_image) {
+        this.product_image = product_image;
     }
 
-    public String getBarcode() {
-        return barcode;
+    public String getProduct_id() {
+        return product_id;
     }
 
-    public void setBarcode(String barcode) {
-        this.barcode = barcode;
+    public void setProduct_id(String product_id) {
+        this.product_id = product_id;
     }
 
     public String getProduct_name() {
@@ -37,67 +33,27 @@ public class Product {
         this.product_name = product_name;
     }
 
-    public String getBrands() {
-        return brands;
+    public String getQuantity() {
+        return quantity;
     }
 
-    public void setBrands(String brands) {
-        this.brands = brands;
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
     }
 
-    public String getImage() {
-        return image;
+    public String getTotal_amount() {
+        return total_amount;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setTotal_amount(String total_amount) {
+        this.total_amount = total_amount;
     }
 
-    public String getCategories_hierarchy() {
-        return categories_hierarchy;
+    public String getCoins_earned() {
+        return coins_earned;
     }
 
-    public void setCategories_hierarchy(String categories_hierarchy) {
-        this.categories_hierarchy = categories_hierarchy;
-    }
-
-    public String getNova_score() {
-        return nova_score;
-    }
-
-    public void setNova_score(String nova_score) {
-        this.nova_score = nova_score;
-    }
-
-    public String getIngredients_analysis_tags() {
-        return ingredients_analysis_tags;
-    }
-
-    public void setIngredients_analysis_tags(String ingredients_analysis_tags) {
-        this.ingredients_analysis_tags = ingredients_analysis_tags;
-    }
-
-    public String getEcoscore_grade() {
-        return ecoscore_grade;
-    }
-
-    public void setEcoscore_grade(String ecoscore_grade) {
-        this.ecoscore_grade = ecoscore_grade;
-    }
-
-    public String getManufacturing_places() {
-        return manufacturing_places;
-    }
-
-    public void setManufacturing_places(String manufacturing_places) {
-        this.manufacturing_places = manufacturing_places;
-    }
-
-    public String getGreen_score() {
-        return green_score;
-    }
-
-    public void setGreen_score(String green_score) {
-        this.green_score = green_score;
+    public void setCoins_earned(String coins_earned) {
+        this.coins_earned = coins_earned;
     }
 }

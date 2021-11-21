@@ -2,7 +2,9 @@ package exportkit.xd;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -34,6 +36,10 @@ public class PurchaseDetailsActivity extends AppCompatActivity {
 
                 // slide open details of product
 
+                Intent intent = new Intent(PurchaseDetailsActivity.this, ItemDetailsActivity.class);
+                intent.putExtra("product", product.getProduct_id());
+                startActivity(intent);
+
 
                 // This tells the GridView to redraw itself
                 // in turn calling your BooksAdapter's getView method again for each cell
@@ -42,5 +48,11 @@ public class PurchaseDetailsActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    public void sendMessage(View view) {
+        Intent intent = new Intent(PurchaseDetailsActivity.this, ItemDetailsActivity.class);
+        intent.putExtra("product","1");
+        startActivity(intent);
     }
 }
