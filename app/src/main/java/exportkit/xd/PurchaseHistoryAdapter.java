@@ -9,13 +9,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
 public class PurchaseHistoryAdapter extends RecyclerView.Adapter<PurchaseHistoryAdapter.MyViewHolder> {
 
-    String names[];
-    double scores[];
+    ArrayList<String>  names;
+    ArrayList<String>  scores;
     Context context;
 
-    public PurchaseHistoryAdapter(Context ct, String s1[], double scrs[]){
+    public PurchaseHistoryAdapter(Context ct, ArrayList<String> s1, ArrayList<String> scrs){
         context = ct;
         names = s1;
         scores = scrs;
@@ -32,13 +34,13 @@ public class PurchaseHistoryAdapter extends RecyclerView.Adapter<PurchaseHistory
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        holder.name.setText(names[position]);
-        holder.score.setText(Double.toString(scores[position]));
+        holder.name.setText(names.get(position));
+        holder.score.setText(scores.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return names.length;
+        return names.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

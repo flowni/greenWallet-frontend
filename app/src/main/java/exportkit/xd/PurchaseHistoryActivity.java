@@ -6,6 +6,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import api.ApiCalls;
+import jsonParsing.Purchase;
+
 public class PurchaseHistoryActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
@@ -20,11 +26,16 @@ public class PurchaseHistoryActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
 
-        s1 = new String[]{"Rewe", "Aldi", "Edeka", "Rewe"};
-        scores = new double[]{11.0, 32.3, 32.2, -23.2};
+        ArrayList<String> stores = new ArrayList<>();
+        ArrayList<String> score = new ArrayList<>();
 
+        List<Purchase> listOfPurchases = ApiCalls.get_purchases_of_user("2");
+        for(int i = 0;i < listOfPurchases.size();i++) {
+            stores.add(listOfPurchases.get(i).getPartner_name());
+            score.add(listOfPurchases.get(i).getPartner_id());
+        }
 
-        PurchaseHistoryAdapter purchaseHistoryAdapter = new PurchaseHistoryAdapter(this, s1, scores);
+        PurchaseHistoryAdapter purchaseHistoryAdapter = new PurchaseHistoryAdapter(this, stores, score);
         recyclerView.setAdapter(purchaseHistoryAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 

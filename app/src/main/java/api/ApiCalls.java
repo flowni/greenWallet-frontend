@@ -8,6 +8,7 @@ import android.os.StrictMode;
 
 import java.util.List;
 
+import jsonParsing.Purchase;
 import jsonParsing.User;
 
 public class ApiCalls {
@@ -20,6 +21,21 @@ public class ApiCalls {
                 .setPriority(Priority.LOW)
                 .build();
         ANResponse<User> response = request.executeForObject(User.class);
+        if (response.isSuccess()) {
+            return response.getResult();
+        } else {
+            return null;
+        }
+    }
+
+    public static List<Purchase> get_purchases_of_user(String user) {
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+        ANRequest request = AndroidNetworking.get("https://greenwallet.azurewebsites.net/purchases/{user}")
+                .addPathParameter("user", user)
+                .setPriority(Priority.LOW)
+                .build();
+        ANResponse<List<Purchase>> response = request.executeForObjectList(Purchase.class);
         if (response.isSuccess()) {
             return response.getResult();
         } else {
