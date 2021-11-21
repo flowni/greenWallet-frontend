@@ -68,9 +68,11 @@ public class Finance_tracker__community__activity extends Activity {
 		// mock data
 		String[] s1 = new String[]{"Rewe", "Aldi", "Edeka", "Rewe", "Rewe", "Aldi", "Edeka", "Rewe"};
 		double[] scores = new double[]{11.0, 32.3, 32.2, -23.2, 11.0, 32.3, 32.2, -23.2};
+		String[] imageUrls = new String[]{"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Logo_Edeka.svg/2000px-Logo_Edeka.svg.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Lidl-Logo.svg/2048px-Lidl-Logo.svg.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/H%26M-Logo.svg/1280px-H%26M-Logo.svg.png", "https://upload.wikimedia.org/wikipedia/commons/0/08/Rewe_Logo.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Logo_Edeka.svg/2000px-Logo_Edeka.svg.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Lidl-Logo.svg/2048px-Lidl-Logo.svg.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/H%26M-Logo.svg/1280px-H%26M-Logo.svg.png", "https://upload.wikimedia.org/wikipedia/commons/0/08/Rewe_Logo.png"};
+
 
 		//connect recyclerview
-		PurchaseHistoryAdapter purchaseHistoryAdapter = new PurchaseHistoryAdapter(this, s1, scores);
+		PurchaseHistoryAdapter purchaseHistoryAdapter = new PurchaseHistoryAdapter(this, s1, scores, imageUrls);
 		recyclerViewDashboard.setAdapter(purchaseHistoryAdapter);
 		recyclerViewDashboard.setLayoutManager(new LinearLayoutManager(this));
 

@@ -174,16 +174,18 @@
 			android:id="@+id/button"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:layout_alignParentTop="true"
+			android:layout_alignParentStart="true"
 			android:layout_alignParentEnd="true"
-			android:layout_marginTop="323dp"
-			android:layout_marginEnd="40dp"
+			android:layout_alignParentBottom="true"
+			android:layout_marginStart="133dp"
+			android:layout_marginEnd="135dp"
+			android:layout_marginBottom="683dp"
 			android:text="All purchases >" />
 
 		<androidx.recyclerview.widget.RecyclerView
 			android:id="@+id/recyclerViewDashboard"
 			android:layout_width="match_parent"
-			android:layout_height="266dp"
+			android:layout_height="181dp"
 			android:layout_below="@+id/frame_12"
 			android:layout_marginTop="19dp" />
 
