@@ -23,8 +23,10 @@ import org.json.JSONArray;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import api.ApiCalls;
+import jsonParsing.Purchase;
 import jsonParsing.User;
 import util.BarcodeEncoderUtil;
 
@@ -68,13 +70,19 @@ public class Finance_tracker__community__activity extends Activity {
 		image_7.setImageBitmap(barcodeEncoded);
 		amount_ek6.setText(user.getBalance());
 
-		// mock data
-		ArrayList<String> s1 = new ArrayList<String>(Arrays.asList("Edeka", "Lidl", "H&M"));
-		ArrayList<String> scores = new ArrayList<String>(Arrays.asList("11.0", "32.3", "32.2"));
-		ArrayList<String> imageUrls = new ArrayList<String>(Arrays.asList("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Logo_Edeka.svg/2000px-Logo_Edeka.svg.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Lidl-Logo.svg/2048px-Lidl-Logo.svg.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/H%26M-Logo.svg/1280px-H%26M-Logo.svg.png"));
 
-		//connect recyclerview
-		PurchaseHistoryAdapter purchaseHistoryAdapter = new PurchaseHistoryAdapter(this, s1, scores, imageUrls);
+		ArrayList<String> imageUrls = new ArrayList<>(Arrays.asList());
+		ArrayList<String> stores = new ArrayList<>();
+		ArrayList<String> score = new ArrayList<>();
+
+		List<Purchase> listOfPurchases = ApiCalls.get_purchases_of_user("2");
+		for(int i = 0;i < listOfPurchases.size() || i > 4;i++) {
+			stores.add(listOfPurchases.get(i).getPartner_name());
+			score.add(listOfPurchases.get(i).getTotal_coins());
+			imageUrls.add(listOfPurchases.get(i).getPartner_icon_url());
+		}
+
+		PurchaseHistoryAdapter purchaseHistoryAdapter = new PurchaseHistoryAdapter(this, stores, score, imageUrls);
 		recyclerViewDashboard.setAdapter(purchaseHistoryAdapter);
 		recyclerViewDashboard.setLayoutManager(new LinearLayoutManager(this));
 

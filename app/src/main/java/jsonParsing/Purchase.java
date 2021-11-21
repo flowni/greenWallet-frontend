@@ -7,6 +7,23 @@ public class Purchase {
     private String total_amount = "";
     private String total_coins = "";
     private String products = "";
+    private String partner_icon_url = "";
+
+    public String getProducts() {
+        return products;
+    }
+
+    public void setProducts(String products) {
+        this.products = products;
+    }
+
+    public String getPartner_icon_url() {
+        return partner_icon_url;
+    }
+
+    public void setPartner_icon_url(String partner_icon_url) {
+        this.partner_icon_url = partner_icon_url;
+    }
 
     public String getPurchase_id() {
         return purchase_id;

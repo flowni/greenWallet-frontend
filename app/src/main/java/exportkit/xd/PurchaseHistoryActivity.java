@@ -32,14 +32,15 @@ public class PurchaseHistoryActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
 
-        ArrayList<String> imageUrls = new ArrayList<String>(Arrays.asList("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Logo_Edeka.svg/2000px-Logo_Edeka.svg.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Logo_Edeka.svg/2000px-Logo_Edeka.svg.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Lidl-Logo.svg/2048px-Lidl-Logo.svg.png"));
+        ArrayList<String> imageUrls = new ArrayList<>(Arrays.asList());
         ArrayList<String> stores = new ArrayList<>();
         ArrayList<String> score = new ArrayList<>();
 
         List<Purchase> listOfPurchases = ApiCalls.get_purchases_of_user("2");
         for(int i = 0;i < listOfPurchases.size();i++) {
             stores.add(listOfPurchases.get(i).getPartner_name());
-            score.add(listOfPurchases.get(i).getPartner_id());
+            score.add(listOfPurchases.get(i).getTotal_coins());
+            imageUrls.add(listOfPurchases.get(i).getPartner_icon_url());
         }
 
         PurchaseHistoryAdapter purchaseHistoryAdapter = new PurchaseHistoryAdapter(this, stores, score, imageUrls);
