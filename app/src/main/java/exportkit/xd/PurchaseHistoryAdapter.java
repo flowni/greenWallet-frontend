@@ -52,8 +52,8 @@ public class PurchaseHistoryAdapter extends RecyclerView.Adapter<PurchaseHistory
             @Override
             public void onClick(View view) {
                 System.out.println("testclick" + Integer.toString(holder.getAdapterPosition()));
-                Intent intent = new Intent(context, ItemDetailsActivity.class);
-                intent.putExtra("purchase_id",  Integer.toString(holder.getAdapterPosition()));
+                Intent intent = new Intent(context, PurchaseDetailsActivity.class);
+                intent.putExtra("purchase_id",  Integer.toString(holder.getAdapterPosition()+1));
                 context.startActivity(intent);
             }
         });
