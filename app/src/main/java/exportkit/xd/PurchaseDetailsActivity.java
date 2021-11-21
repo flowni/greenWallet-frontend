@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageView;
 
 import api.ApiCalls;
 import jsonParsing.Product;
@@ -25,6 +26,8 @@ public class PurchaseDetailsActivity extends AppCompatActivity {
         Product[] products = purchase.getProducts();
 
         GridView gridView = (GridView)findViewById(R.id.gridview);
+        ImageView imageView = (ImageView)findViewById(R.id.imageView2);
+
         PurchaseDetailsAdapter booksAdapter = new PurchaseDetailsAdapter(this, products);
         gridView.setAdapter(booksAdapter);
 
