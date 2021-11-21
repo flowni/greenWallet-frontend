@@ -21,6 +21,9 @@ import com.androidnetworking.interfaces.JSONArrayRequestListener;
 
 import org.json.JSONArray;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import api.ApiCalls;
 import jsonParsing.User;
 import util.BarcodeEncoderUtil;
@@ -66,10 +69,9 @@ public class Finance_tracker__community__activity extends Activity {
 		amount_ek6.setText(user.getBalance());
 
 		// mock data
-		String[] s1 = new String[]{"Rewe", "Aldi", "Edeka", "Rewe", "Rewe", "Aldi", "Edeka", "Rewe"};
-		double[] scores = new double[]{11.0, 32.3, 32.2, -23.2, 11.0, 32.3, 32.2, -23.2};
-		String[] imageUrls = new String[]{"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Logo_Edeka.svg/2000px-Logo_Edeka.svg.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Lidl-Logo.svg/2048px-Lidl-Logo.svg.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/H%26M-Logo.svg/1280px-H%26M-Logo.svg.png", "https://upload.wikimedia.org/wikipedia/commons/0/08/Rewe_Logo.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Logo_Edeka.svg/2000px-Logo_Edeka.svg.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Lidl-Logo.svg/2048px-Lidl-Logo.svg.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/H%26M-Logo.svg/1280px-H%26M-Logo.svg.png", "https://upload.wikimedia.org/wikipedia/commons/0/08/Rewe_Logo.png"};
-
+		ArrayList<String> s1 = new ArrayList<String>(Arrays.asList("Rewe", "Aldi", "Edeka"));
+		ArrayList<String> scores = new ArrayList<String>(Arrays.asList("11.0", "32.3", "32.2"));
+		ArrayList<String> imageUrls = new ArrayList<String>(Arrays.asList("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Logo_Edeka.svg/2000px-Logo_Edeka.svg.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Lidl-Logo.svg/2048px-Lidl-Logo.svg.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/H%26M-Logo.svg/1280px-H%26M-Logo.svg.png"));
 
 		//connect recyclerview
 		PurchaseHistoryAdapter purchaseHistoryAdapter = new PurchaseHistoryAdapter(this, s1, scores, imageUrls);

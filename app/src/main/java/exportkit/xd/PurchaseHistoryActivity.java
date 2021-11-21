@@ -12,12 +12,16 @@ import android.widget.ImageView;
 
 import java.io.InputStream;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import api.ApiCalls;
+import jsonParsing.Purchase;
+
 public class PurchaseHistoryActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
-
-    String s1[], imageUrls[];
-    double scores[];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,14 +30,17 @@ public class PurchaseHistoryActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
 
-        s1 = new String[]{"Rewe", "Aldi", "Edeka", "Rewe"};
-        scores = new double[]{11.0, 32.3, 32.2, -23.2};
-        imageUrls = new String[]{"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Logo_Edeka.svg/2000px-Logo_Edeka.svg.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Lidl-Logo.svg/2048px-Lidl-Logo.svg.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/H%26M-Logo.svg/1280px-H%26M-Logo.svg.png", "https://upload.wikimedia.org/wikipedia/commons/0/08/Rewe_Logo.png"};
+        ArrayList<String> imageUrls = new ArrayList<String>(Arrays.asList("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Logo_Edeka.svg/2000px-Logo_Edeka.svg.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Lidl-Logo.svg/2048px-Lidl-Logo.svg.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/H%26M-Logo.svg/1280px-H%26M-Logo.svg.png"));
+        ArrayList<String> stores = new ArrayList<>();
+        ArrayList<String> score = new ArrayList<>();
 
+        List<Purchase> listOfPurchases = ApiCalls.get_purchases_of_user("2");
+        for(int i = 0;i < listOfPurchases.size();i++) {
+            stores.add(listOfPurchases.get(i).getPartner_name());
+            score.add(listOfPurchases.get(i).getPartner_id());
+        }
 
-
-
-        PurchaseHistoryAdapter purchaseHistoryAdapter = new PurchaseHistoryAdapter(this, s1, scores, imageUrls);
+        PurchaseHistoryAdapter purchaseHistoryAdapter = new PurchaseHistoryAdapter(this, stores, score, imageUrls);
         recyclerView.setAdapter(purchaseHistoryAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 

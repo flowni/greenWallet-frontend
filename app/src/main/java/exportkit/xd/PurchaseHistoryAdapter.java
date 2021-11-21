@@ -17,13 +17,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.io.InputStream;
 
+import java.util.ArrayList;
+
 public class PurchaseHistoryAdapter extends RecyclerView.Adapter<PurchaseHistoryAdapter.MyViewHolder> {
 
-    String names[], imageUrls[];
-    double scores[];
+    ArrayList<String>  names;
+    ArrayList<String>  scores;
     Context context;
+    ArrayList<String> imageUrls;
 
-    public PurchaseHistoryAdapter(Context ct, String s1[], double scrs[], String imgUrls[]){
+    public PurchaseHistoryAdapter(Context ct, ArrayList<String> s1, ArrayList<String> scrs, ArrayList<String> imgUrls){
         context = ct;
         names = s1;
         scores = scrs;
@@ -40,24 +43,20 @@ public class PurchaseHistoryAdapter extends RecyclerView.Adapter<PurchaseHistory
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-
-        holder.name.setText(names[position]);
-        holder.score.setText(Double.toString(scores[position]));
+        holder.name.setText(names.get(position));
+        holder.score.setText(scores.get(position));
 
         // show The Image in a ImageView
         //new DownloadImageTask((ImageView) holder.imageView)
         //        .execute("https://camo.githubusercontent.com/ac6e1101f110e5f500287cf70dac72519687620deefb5e8de1fa7ba6a3ba2407/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f706e672f747769747465722e706e67");
 
         new DownloadImageTask((ImageView) holder.imageView)
-               .execute(imageUrls[position]);
-        //
-
-
+               .execute(imageUrls.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return names.length;
+        return names.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
