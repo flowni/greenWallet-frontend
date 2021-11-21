@@ -18,6 +18,7 @@ public class PurchaseDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_purchase_details);
+        getSupportActionBar().hide();
         String purchaseId = getIntent().getExtras().getString("purchase_id");
 
         Purchase purchase = ApiCalls.getPurchaseDetails(purchaseId);

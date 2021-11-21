@@ -32,6 +32,7 @@ public class PurchaseHistoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_purchase_history);
+        getSupportActionBar().hide();
 
         recyclerView = findViewById(R.id.recyclerView);
 

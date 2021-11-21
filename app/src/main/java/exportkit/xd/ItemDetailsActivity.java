@@ -27,6 +27,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.item_details);
+        getSupportActionBar().hide();
 
         productNameTextView = findViewById(R.id.textView4);
         productImageView = findViewById(R.id.imageView3);
